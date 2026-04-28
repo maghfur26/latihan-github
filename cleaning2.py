@@ -97,7 +97,7 @@ df.sort_values('love_count', ascending=False, inplace=True)
 df.drop_duplicates(subset=['recipe_name'], keep='first', inplace=True)
 df.drop_duplicates(subset=['ingredients_cleaned'], keep='first', inplace=True)  
 
-# Check for duplicates
+# Check for duplicates again after dropping
 print(f"Duplicated Recipe Name: {df['recipe_name'].duplicated().sum()}")
 print(f"Duplicated Ingredients Cleaned: {df['ingredients_cleaned'].duplicated().sum()}")
 
